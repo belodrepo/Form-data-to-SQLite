@@ -1,5 +1,5 @@
-const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
+const express = require('express'); //Express szerver importálása
+const sqlite3 = require('sqlite3').verbose(); SQLite importálása
 const cors = require('cors');
 const path = require('path');
 
