@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .form-container {
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+            }
+    
+            table, td, th {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 5px 10px;
+            
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="form-container">
+            <fieldset>
+                <legend>Űrlap</legend>
+                <form action="" id="userForm">
+                    <p>
+                        <label for="">Vezetéknév: </label>
+                        <input type="text" name="vezeteknev">
+                    </p>
+                    <p>
+                        <label for="">Keresztnév: </label>
+                        <input type="text" name="keresztnev">
+                    </p>
+                    <p>
+                        <label for="">Email cím: </label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label for="">Telefonszám</label>
+                        <input type="tel" name="telephone">
+                    </p>
+                    <button type="submit">Elküld</button>
+                </form>
+            </fieldset>
+            <p>
+            <h3>LocalStorage adatok megjelenítése</h3>
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Vezetéknév</th>
+                        <th>Keresztnév</th>
+                        <th>Email cím</th>
+                        <th>Telefonszám</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTable"><!--ide jönnek az adatok--></tbody>
+            </table>
+        </div>
+        <script src="client.js"></script>
+    </body>
+</html>
