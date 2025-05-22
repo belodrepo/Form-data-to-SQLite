@@ -112,6 +112,7 @@ Töltsd ki az űrlapot, kattints az elküldésre, majd ellenőrizd:
 12/B. Lépés: (opcionális) Ellenőrzés SQLite segítségével
 
 Parancssorból futtasd az sqlite3 users.db parancsot, majd a SELECT * FROM users; SQL parancsot, hogy lásd a mentett adatokat.
+
 Fejlesztői információ:
 --------------------------------------------------------------
 Hibakeresés:
