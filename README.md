@@ -112,3 +112,38 @@ Töltsd ki az űrlapot, kattints az elküldésre, majd ellenőrizd:
 12/B. Lépés: (opcionális) Ellenőrzés SQLite segítségével
 
 Parancssorból futtasd az sqlite3 users.db parancsot, majd a SELECT * FROM users; SQL parancsot, hogy lásd a mentett adatokat.
+Fejlesztői információ:
+--------------------------------------------------------------
+Hibakeresés:
+
+Frontend: Kliens oldalon(client.js, index.html) a debugger; és a console.log(változónév) használatával a webbüöngészőben vizsgálható a kód futása és a változók tartalma.
+
+Backend: Szerver oldalon(server.js) a console.log(változónév) használatával a DEBUG CONSOLE-ra megjeleníthető a változók tartalma:
+pl.: console.log(req.body) - kiíratja a klienstől érkező JSON formátumú kérés (POST request) teljes tartatalmát
+
+A fenti módszerekkel ellenőrizhető, hogy a program futása során a változók kaptak-e értéket és mi az aktuális értékük.
+
+Programkód módosítások érvényesítése:
+
+Backend oldalon (server.js) a kódváltozások csak a szerver leállítása (ctl +C) , majd újraindítása után érvényesülnek. Ezért a backend kód módosítása után mindig újraindítás szükséges (node server.js).
+Az automatikus kódváltozás figyelés és a szerver automatikus újraindításához telepíthető a nodemon csomag az alábbi Terminal paranccsal:
+
+npm install --save-dev nodemon
+
+A telepítés után a package.json fájlban a scripts alatt a start bejegyzést át kell írni:
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js" ITT!
+  },
+
+  Ha nincs start bejegyzés, akkor futtassuk újra az npm init -y parancsot!
+
+A modul telepítése után a bejegyzés - mint fejlesztői csomag (függőség) - megjelenik a package.json fájl devDependencies bejegyzése alatt.
+(a már telepített modulok verziói pedig a dependencies bejegyzés alatt láthatók)
+
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+
+Fontos! A package.json és package-lock.json fájlok bejegyzéseit a Node futtató környezet automatikusan kezeli. Ezekhez normál esetben nem szabad hozzányúlni
+Ezek  a fájlok tarják nyilván a projek adatait (verzió, telepített csomagok és függőségek...stb).
