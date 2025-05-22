@@ -139,7 +139,7 @@ A telepítés után a package.json fájlban a scripts alatt a start bejegyzést 
 
   Ha nincs start bejegyzés, akkor futtassuk újra az npm init -y parancsot!
 
-  A továbbiakban a szervert csak egyszer kell elindítani az npm start paranccsal és ha szükséges vágeztével a ctl + c paranccsal leállítható.
+  A továbbiakban a szervert csak egyszer kell elindítani az npm start paranccsal és ha szükséges végeztével a ctl + c paranccsal leállítható.
 
 A modul telepítése után a bejegyzés - mint fejlesztői csomag (függőség) - megjelenik a package.json fájl devDependencies bejegyzése alatt.
 (a már telepített modulok verziói pedig a dependencies bejegyzés alatt láthatók)
@@ -150,3 +150,18 @@ A modul telepítése után a bejegyzés - mint fejlesztői csomag (függőség) 
 
 Fontos! A package.json és package-lock.json fájlok bejegyzéseit a Node futtató környezet automatikusan kezeli. Ezekhez normál esetben nem szabad hozzányúlni
 Ezek  a fájlok tarják nyilván a projek adatait (verzió, telepített csomagok és függőségek...stb).
+
+----------------------------------------------------------------------------------
+Windows script futtatási hiba
+
+Amennyiben az npm kezdetű parancsok kiadása után scriptt futtatási jogosultság hiányát jelzi a Terminal: 
+piros hibaüzenet: "...running scripts is disabled on this system..."
+
+Az operációs rendszerbenn parancssorban engedélyezni kell a szkriptek futását a következő módon:
+
+1. First, Open PowerShell with Run as Administrator.
+2. Then, run this command in PowerShell
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+https://stackoverflow.com/questions/64633727/how-to-fix-running-scripts-is-disabled-on-this-system
