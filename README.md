@@ -157,7 +157,7 @@ Windows script futtatási hiba
 Amennyiben az npm kezdetű parancsok kiadása után scriptt futtatási jogosultság hiányát jelzi a Terminal: 
 piros hibaüzenet: "...running scripts is disabled on this system..."
 
-Az operációs rendszerbenn parancssorban engedélyezni kell a szkriptek futását a következő módon:
+Az operációs rendszerben parancssorban engedélyezni kell a szkriptek futását a következő módon:
 
 1. First, Open PowerShell with Run as Administrator.
 2. Then, run this command in PowerShell
