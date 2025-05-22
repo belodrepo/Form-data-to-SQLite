@@ -120,7 +120,7 @@ Hibakeresés:
 Frontend: Kliens oldalon(client.js, index.html) a debugger; és a console.log(változónév) használatával a webbüöngészőben vizsgálható a kód futása és a változók tartalma.
 
 Backend: Szerver oldalon(server.js) a console.log(változónév) használatával a DEBUG CONSOLE-ra megjeleníthető a változók tartalma:
-pl.: console.log(req.body) - kiíratja a klienstől érkező JSON formátumú kérés (POST request) teljes tartatalmát
+pl.: console.log(req.body) - kiíratja a klienstől érkező JSON formátumú kérés (POST request) teljes tartalmát
 
 A fenti módszerekkel ellenőrizhető, hogy a program futása során a változók kaptak-e értéket és mi az aktuális értékük.
 
