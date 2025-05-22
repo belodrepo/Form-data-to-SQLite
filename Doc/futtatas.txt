@@ -140,6 +140,8 @@ A telepítés után a package.json fájlban a scripts alatt a start bejegyzést 
 
   Ha nincs start bejegyzés, akkor futtassuk újra az npm init -y parancsot!
 
+A továbbiakban a szervert csak egyszer kell elindítani az npm start paranccsal és ha szükséges, a ctl + c paranccsal leállítható.
+
 A modul telepítése után a bejegyzés - mint fejlesztői csomag (függőség) - megjelenik a package.json fájl devDependencies bejegyzése alatt.
 (a már telepített modulok verziói pedig a dependencies bejegyzés alatt láthatók)
 
